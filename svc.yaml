@@ -13,7 +13,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: saumya-cisco-app
+    app: saumya-cisco-app #this should be same as the lable in deploy.sh app selector label
   type: ClusterIP
 status:
   loadBalancer: {}
