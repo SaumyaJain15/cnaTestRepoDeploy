@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: saumya-cisco-app
+  name: saumya-cisco-app
+  namespace: saumya-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: saumya-cisco-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: saumya-cisco-app
+    spec:
+      containers:
+      - image: scjdocker/saumyawebapp:ciscov1
+        name: saumyawebapp
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 200M
+          limits:
+            cpu: 200m
+            memory: 300M
+status: {}
