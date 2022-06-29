@@ -19,7 +19,7 @@ spec:
         app: saumya-cisco-app
     spec:
       containers:
-      - image: scjdocker/saumyawebapp:ciscov1
+      - image: scjdocker/cnatestapp:v4
         name: saumyawebapp
         ports:
         - containerPort: 80
